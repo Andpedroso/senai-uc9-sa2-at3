@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset=utf-8>
+        <title>Game Mania</title>
+        <meta name="description" content="`Programador Full-Stack, Senai">
+        <meta name="author" content="HTML, CSS, JavaScript, Senai">
+        <meta name="author" content="André Moura Pedroso">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/jquery-3.6.0.js"></script>
+    </head>
+    <body class="formulario_body">
+        <header>
+            <div class="container-grid posicionamento-header">
+                <a href="#"><img src="../img/game_mania.png" alt="Logo do site Game Mania"></a>
+                <nav id="menu" class="menu">
+                    <a href="../index.html">home</a>
+                    <a href="hardware.html">hardware</a>
+                    <a href="cel_acessorios.html">celulares</a>
+                    <a href="jogos.html">jogos</a>
+                    <a href="cadastro.html">cadastrar</a>
+                </nav>
+                <a href="#" onclick="mostrarMenu()"><img class="barras" src="../img/bars.svg" alt="menu de barras"></a>
+            </div>
+        </header>
+
+        <form class="container formulario" action="#" method="post">
+            <hr><br>
+            <label for="name">Nome completo </label>
+            <input id="nome_cadastro" type="text" name="name" maxlength="50"required autocomplete="additional-name" placeholder="Nome Completo">
+            <hr><br>
+            <label for="date">Data de nascimento </label>
+            <input id="data_cadastro" type="date" name="" id="date" required>
+            <hr><br>
+            <label for="email">E-mail </label>
+            <input id="email_cadastro" type="email" name="email" id="email" maxlength="40" placeholder="E-mail" required autocomplete="email">
+            <label for="exemplo">Exemplo de E-mail </label>
+            <input type="email" name="exemplo" id="exemplo" value="example@gmail.com" readonly>
+            <hr><br>
+            <label for="password">Password </label>
+            <input id="senha_cadastro" type="password" name="" placeholder="senha" id="password" required>
+            <hr><br>
+            <label for="checbox">mostrar senha</label>
+            <input type="checkbox" name="" id="checbox">
+            <hr><br>
+            <label for="tel">Telefone ou celular </label>
+            <input id="celular_cadastro" type="tel" name="tel" id="tel" placeholder="Celular" required autocomplete="cc-number">
+            <hr><br>
+            <label for="curriculo">Adicione sua foto </label>
+            <input id="foto_cadastro" type="file" name="currículo" id="currículo" required autocomplete="#">
+            <hr><br>
+            <div style="float: left;">
+                <input onclick="enviarCadastro()" type="submit" value="Enviar Cadastro" id="btn-enviar" name="btn-enviar" required>
+            </div>
+            <br>
+            <div>
+                <br>
+                <textarea name="mensagem" id="mensagem" cols="150" rows="5" maxlength="200" minlength="200" placeholder="Digite aqui sua opinião e sugestões sobre nossos serviços!"></textarea>
+                <br>
+                <button onclick="enviarMensagem()">Enviar Mensagem</button>
+            </div>
+            <hr><br>
+        </form>
+
+        <footer>
+            <div class="conteudo_footer container">
+                <div style="float: left">
+                    <h4>Game Mania</h4>
+                    <p><a href="https://github.com/Andpedroso">contato</a></p>
+                    <p><a href="https://www.mundosenai.com.br/">suporte</a></p>            
+                </div>
+                <div style="float: right;" class="paginas_footer">
+                    <h4>Páginas</h4>
+                    <a href="../index.html">home</a>
+                    <a href="cel_acessorios.html">celulares</a>
+                    <a href="jogos.html">jogos</a>
+                </div>
+                <div style="float: right">
+                    <h7>Envie seu E-mail para receber novidades!</h7>
+                    <form action="">
+                        <label for="email">E-mail </label>
+                        <input id="campo_email" type="email" name="email" maxlength="40" placeholder="E-mail" autocomplete="email" required>
+                        <button onclick="enviarEmail()">Enviar</button>
+                    </form>
+                    <div class="imagens_footer">
+                        <div style="height: 50px; overflow: hidden;">
+                            <a href="https://www.facebook.com/">
+                                <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="código html" width="50px" />
+                            </a>
+                        </div>
+                        <div style="height: 50px; overflow: hidden;">
+                            <a href="https://www.instagram.com">
+                                <img src="https://logodownload.org/wp-content/uploads/2017/04/instagram-logo.png" alt="código html" width="50px" />
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            let menu = document.getElementById("menu");
+
+            //console.log(menu.style.display)
+
+            function mostrarMenu()
+            {
+                if(menu.style.display == "none")
+                {
+                    menu.style.display = "flex"
+                }
+            
+                else
+                {
+                    menu.style.display = "none"
+                }
+            }
+        </script>
+        <script src="../js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
